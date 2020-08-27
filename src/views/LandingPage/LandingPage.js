@@ -34,7 +34,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Material Kit React"
+        brand="Banto"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -43,11 +43,12 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax filter image={require("assets/img/landing-bg.jpg")}>
+      {/* <Parallax filter image={require("assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Your Story Starts With Us.</h1>
+              <h1 className={classes.title}>내 소중한 시간</h1>
+              <h1 className={classes.title}>그리고 반토</h1>
               <h4>
                 Every landing page needs a small description after the big bold
                 title, that{"'"}s why we added this text here. Add here all the
@@ -68,12 +69,43 @@ export default function LandingPage(props) {
             </GridItem>
           </GridContainer>
         </div>
-      </Parallax>
+      </Parallax> */}
+
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <ProductSection />
           <TeamSection />
-          <WorkSection />
+        </div>
+      </div>
+
+      <div
+        className={classNames(classes.main, classes.mainRaised)}
+        style={{ backgroundColor: "black" }}
+      >
+        <div className={classes.container}>
+          <div
+            className={classes.container}
+            style={{ backgroundColor: "black" }}
+          >
+            <ProductSection />
+          </div>
+        </div>
+
+        <div className={classNames(classes.main, classes.mainRaised)}>
+          <div className={classes.container}>
+            <TeamSection />
+          </div>
+        </div>
+
+        <div
+          className={classNames(classes.main, classes.mainRaised)}
+          style={{ backgroundColor: "black" }}
+        >
+          <div
+            className={classes.container}
+            style={{ backgroundColor: "black" }}
+          >
+            <WorkSection />
+          </div>
         </div>
       </div>
       <Footer />
